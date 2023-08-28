@@ -13,6 +13,7 @@ This custom layer implementation draws its design principles from the influentia
 4. **Activation Flexibility:** Our custom self-attention layer supports a range of activation functions, allowing you to tailor the layer's behavior to your needs. Choose from activation functions like `relu`, `tanh`, and more. The default activation is set to `linear`.
 5. **Attention Control with Gamma:** The custom self-attention layer introduces the `gamma` parameter, which governs the influence of the attention mask on the outputs. While you can set an initial value for Gamma, its final value is learned during the model training process. This parameter provides a dynamic means of adjusting the attention mechanism's impact based on the specific needs of your model.
 6. **Attention Score Retrieval:** By setting the `return_attention_scores` parameter to `True`, the custom layer returns the inputs after applying the attention mask and scaling by Gamma. This allows you to access and analyze the attention scores for deeper insights into the model's decision-making process.
+7. **Multi-Head Attention Support:** The custom self-attention layer includes the `num_head` parameter, which mirrors the multihead-attention mechanism. Unlike the `filters` parameter, `num_head` is an internal representation and doesn't affect the output shape. 
 
 **Acknowledgments:**
 This implementation has drawn inspiration and learning from the community's contributions. Special thanks to the authors of:
