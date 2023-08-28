@@ -15,14 +15,6 @@ This custom layer implementation draws its design principles from the influentia
 6. **Attention Score Retrieval:** By setting the `return_attention_scores` parameter to `True`, the custom layer returns the inputs after applying the attention mask and scaling by Gamma. This allows you to access and analyze the attention scores for deeper insights into the model's decision-making process.
 7. **Multi-Head Attention Support:** The custom self-attention layer includes the `num_head` parameter, which mirrors the multihead-attention mechanism. Unlike the `filters` parameter, `num_head` is an internal representation and doesn't affect the output shape. 
 
-**Acknowledgments:**
-This implementation has drawn inspiration and learning from the community's contributions. Special thanks to the authors of:
-
-https://github.com/grohith327/simplegan/blob/master/simplegan/layers/selfattention.py
-https://github.com/MorvanZhou/mnistGANs/blob/main/sagan.py
-
-These resources have greatly contributed to shaping our implementation.
-
 **Usage:**
 To integrate this custom self-attention layer into your model, follow these steps:
 
@@ -33,3 +25,11 @@ To integrate this custom self-attention layer into your model, follow these step
 
 **Example:**
 For a comprehensive usage example, refer to the companion Jupyter notebook `SelfAttention_1x1_Conv2D.ipynb`, where we walk through step-by-step implementation and visualization of the custom self-attention layer.
+
+**Acknowledgments:**
+This implementation has drawn inspiration and learning from the community's contributions. Special thanks to the authors of:
+
+https://github.com/grohith327/simplegan/blob/master/simplegan/layers/selfattention.py
+https://github.com/MorvanZhou/mnistGANs/blob/main/sagan.py
+
+These resources have greatly contributed to shaping our implementation.
