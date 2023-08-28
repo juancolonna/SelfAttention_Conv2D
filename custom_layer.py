@@ -27,9 +27,9 @@ class SelfAttention_Conv2D(keras.layers.Layer):
         self.f = self.block(self.num_heads) # [n, w*h, heads]
         self.g = self.block(self.num_heads) # [n, w*h, heads]
         self.h = self.block(self.num_heads) # [n, w*h, heads]
-        
+
         # output feature maps -> [n, w, h, filters]
-        self.v = layers.Conv2D(self.c, 1, 1, activation=self.activation) 
+        self.v = layers.Conv2D(self.c, 1, 1, activation=self.activation)
 
     @staticmethod
     def block(c):
@@ -49,8 +49,8 @@ class SelfAttention_Conv2D(keras.layers.Layer):
         cs = context_wh.shape   # [n, w*h, heads]
         context = self.gamma * tf.reshape(context_wh, [-1, d[1], d[2], cs[-1]])    # [n, w, h, c]
         o = self.v(context) + inputs   # residual -> [n, w, h, filters]
-  
+
         if self.scores:
-            return o, self.attention
+            return o, context
         else:
             return o
