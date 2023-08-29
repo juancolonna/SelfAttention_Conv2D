@@ -5,6 +5,8 @@ Welcome to the documentation for our custom self-attention layer, meticulously d
 **Overview:**
 This custom layer implementation draws its design principles from the influential SAGAN paper ([Self-Attention Generative Adversarial Networks](https://arxiv.org/abs/1805.08318v2on), which introduced pioneering concepts in self-attention. While originally implemented in PyTorch, we've taken the initiative to translate and adapt this mechanism for Keras (and TensorFlow), enriching it with unique modifications that further elevate its functionality.
 
+![Screenshot](seflAttention.png)
+
 **Key Features:**
 
 1. **Versatile Usage:** This custom layer can seamlessly serve as the firts layer within a convolutional model or as an intermediary layer.
