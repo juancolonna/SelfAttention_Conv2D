@@ -35,3 +35,7 @@ https://github.com/grohith327/simplegan/blob/master/simplegan/layers/selfattenti
 https://github.com/MorvanZhou/mnistGANs/blob/main/sagan.py
 
 These resources have greatly contributed to shaping our implementation.
+
+**How to cite this repo:**
+
+[![DOI](https://zenodo.org/badge/683926889.svg)](https://zenodo.org/badge/latestdoi/683926889)
