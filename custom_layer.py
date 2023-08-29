@@ -47,7 +47,7 @@ class SelfAttention_Conv2D(keras.layers.Layer):
         context_wh = tf.matmul(self.attention, h)  # [n, w*h, w*h] @ [n, w*h, heads] = [n, w*h, heads]
         d = inputs.shape        # [n, w, h, channels]
         cs = context_wh.shape   # [n, w*h, heads]
-        context = self.gamma * tf.reshape(context_wh, [-1, d[1], d[2], cs[-1]])    # [n, w, h, c]
+        context = self.gamma * tf.reshape(context_wh, [-1, d[1], d[2], cs[-1]])    # [n, w, h, heads]
         o = self.v(context) + inputs   # residual -> [n, w, h, filters]
 
         if self.scores:
